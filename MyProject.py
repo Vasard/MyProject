@@ -36,7 +36,21 @@ def imgChange(name):
     tabs.select(1)
     img=PhotoImage(file=name).subsample(1)
     can.create_image(10,10,image=img,anchor=NW)
-    #open_('Brownie.txt')
+    open_('Brownie.txt')
+
+def Charlotte():
+    open_('Charlotte.txt')
+
+def Cheesecakes():
+    open_('Cheesecakes.txt')
+
+def Pancakes():
+    open_('Pancakes.txt')
+
+def Brownie():
+    open_('Brownie.txt')
+  
+    
 
 main = Tk()
 main.geometry("400x300")
@@ -89,15 +103,28 @@ tmenu.add_separator()
 btn_open = Button(tabs1,text="open",command=open_).grid(row=1,column=0)
 btn_save = Button(tabs1,text="save",command=save_).grid(row=1,column=1)
 btn_exit = Button(tabs1,text="exit",command=exit_).grid(row=1,column=2)
-box = scrolledtext.ScrolledText(main,width=40,height=5)
-box.pack()
+#box = scrolledtext.ScrolledText(main,width=40,height=5)
+#box.pack()
 #img=PhotoImage(file="").subsample(3
 #can.create_image(10,10,image=img,anchor=NW)
 
-btn = Button(tmenu, text="Brownie Receipt", font="Arial 30", fg="Red", bg="lightblue", width=15, height=3, relief=GROOVE)
-btn.bind("<Button-1>",imgChange)
-btn.pack()
+Charlotte = Button(tmenu, text="Charlotte Receipt", font="Arial 30", fg="Red", bg="lightblue", width=110, height=20, relief=GROOVE)
+Charlotte.bind("<Button-1>",Charlotte)
+Charlotte.pack()
+
+Cheesecakes = Button(tmenu, text="Cheesecakes Receipt", font="Arial 30", fg="Red", bg="lightblue", width=110, height=20, relief=GROOVE)
+Cheesecakes.bind("<Button-1>",Cheesecakes)
+Cheesecakes.pack()
+
+Pancakes = Button(tmenu, text="Pancakes Receipt", font="Arial 30", fg="Red", bg="lightblue", width=110, height=20, relief=GROOVE)
+Pancakes.bind("<Button-1>",Pancakes)
+Pancakes.pack()
+
+Brownie = Button(tmenu, text="Brownie Receipt", font="Arial 30", fg="Red", bg="lightblue", width=110, height=20, relief=GROOVE)
+Brownie.bind("<Button-1>",Brownie)
+Brownie.pack()
 
 
 
 main.mainloop()
+
